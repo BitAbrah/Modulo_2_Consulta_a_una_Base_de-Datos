@@ -1,0 +1,56 @@
+use baltikrazybd;
+
+
+
+alter table persona add column telefono varchar(20);
+
+alter table productiklin add column peso int;
+
+alter table plato add column ingrediente_secreto varchar(20);
+
+alter table persona modify telefono int;
+
+alter table plato modify ingrediente_secreto varchar(40);
+
+alter table productiklin modify peso float;
+
+alter table persona drop column apellido;
+
+alter table plato drop column tipo;
+
+alter table productiklin drop column tipo;
+
+
+drop table productiklin;
+
+
+create database botikadb;
+
+use bitikadb;
+
+create table cerveza (
+id_cerveza int auto_increment,
+nombre varchar(20),
+ml int,
+primary key (id_cerveza)
+);
+
+create table vino (
+id_vino int auto_increment,
+nombre varchar(20),
+ml int,
+primary key (id_vino)
+);
+
+alter table cerveza add column grado varcharacter(3);
+alter table cerveza add column tipo varchar(10);
+
+alter table vino add column viña varchar(20);
+alter table vino add column año varchar(4);
+
+alter table cerveza modify grado varchar(10);
+alter table vino modify año int;
+
+alter table cerveza drop column grado;
+alter table vino drop column ml;
+

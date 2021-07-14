@@ -1,0 +1,28 @@
+create database baltikrazybd;
+
+use baltikrazybd;
+
+create table persona (
+id_tabla int auto_increment,
+nombre varchar(30),
+apellido varchar(30),
+fechaNacimiento date,
+primary key(id_tabla)
+);
+
+create table productiklin (
+id_producto int auto_increment,
+nombre varchar(20),
+tipo varchar (20),
+valor int,
+primary key (id_producto)
+);
+
+create table plato (
+id_plato int auto_increment,
+nombre varchar(20),
+tipo varchar(20),
+chef varchar(30),
+primary key (id_plato)
+);
+
